@@ -1,0 +1,367 @@
+:root {
+    --primary-color: #2563eb;
+    --accent-color: #3b82f6;
+    --success-color: #10b981;
+    --bg-color: #f0f9ff;
+    --text-color: #334155;
+    --light-gray: #e2e8f0;
+    --card-bg: #ffffff;
+    --header-bg: #dbeafe;
+    --footer-bg: #1e40af;
+    --footer-text: #f0f9ff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-header {
+    background-color: var(--header-bg);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.university-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.university-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #1e40af;
+}
+
+.university-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.student-info {
+    text-align: right;
+}
+
+.student-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.task-title {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.main-content {
+    flex: 1;
+    padding-bottom: 3rem;
+}
+
+.app-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.app-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.app-intro p {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.code-generator-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--light-gray);
+}
+
+.input-container {
+    margin-bottom: 1rem;
+}
+
+.prompt-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    resize: vertical;
+}
+
+.prompt-textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    background-color: #fff;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.generate-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.generate-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.output-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--light-gray);
+    margin-bottom: 2rem;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #f8fafc;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.output-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.output-title h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.language-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+.output-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.copy-button {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copy-button:hover {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+.code-display {
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+
+.code-display pre {
+    margin: 0;
+    padding: 1.5rem !important;
+    overflow-x: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: #f8fafc !important;
+}
+
+.copy-notification {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: var(--success-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.copy-notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .student-info {
+        text-align: center;
+    }
+
+    .university-info {
+        flex-direction: column;
+    }
+
+    .output-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .output-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+code[class*="language-"] {
+    text-shadow: none !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6b7280 !important;
+}
+
+.token.punctuation {
+    color: #64748b !important;
+}
+
+.token.selector,
+.token.tag {
+    color: #ef4444 !important;
+}
+
+.token.property,
+.token.boolean,
+.token.number {
+    color: #f59e0b !important;
+}
+
+.token.constant,
+.token.symbol,
+.token.attr-name {
+    color: #10b981 !important;
+}
+
+.token.string,
+.token.char {
+    color: #10b981 !important;
+}
+
+.token.builtin,
+.token.deleted {
+    color: #ef4444 !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+    color: #6366f1 !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #3b82f6 !important;
+}
+
+.token.function {
+    color: #f97316 !important;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #ec4899 !important;
+}

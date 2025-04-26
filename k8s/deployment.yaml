@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-code-assistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-code-assistant
+  template:
+    metadata:
+      labels:
+        app: ai-code-assistant
+    spec:
+      containers:
+        - name: ai-code-assistant
+          image: eshbah/ai-powered-code-generator-application:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
